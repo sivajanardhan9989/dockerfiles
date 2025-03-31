@@ -1,0 +1,5 @@
+FROM almalinux:8
+RUN yum install nginx -y 
+RUN echo "hello welcome to doker files" > /usr/share/nginx/html/hello.html
+# deamonff  makes our contaner running and attached to the screen 
+CMD ["nginx", "-g", "daemon off;"]

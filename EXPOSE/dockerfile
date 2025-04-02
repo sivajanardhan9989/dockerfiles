@@ -1,0 +1,5 @@
+FROM almalinux:8
+RUN yum install nginx -y
+# expose is  not adding any functionality to the image, but it is a good practice to include it in the Dockerfile.
+EXPOSE 80/tcp
+CMD ["nginx", "-g", "daemon off;"]

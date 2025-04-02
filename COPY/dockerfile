@@ -1,0 +1,4 @@
+FROM nginx 
+# remove the default index.html file that comes with nginx
+RUN rm -rf /usr/share/nginx/html/index.html
+copy index.html /usr/share/nginx/html/index.html

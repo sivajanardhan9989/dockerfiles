@@ -1,0 +1,5 @@
+FROM almalinux:8
+ENV NAME=John\
+    AGE=30\
+    COUNTRY=USA
+  

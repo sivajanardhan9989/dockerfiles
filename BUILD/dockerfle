@@ -1,0 +1,7 @@
+FROM almalinux:8
+RUN yum install nginx -y
+RUN rm -rf /usr/share/nginx/html/index.html
+#onbuild instruction will not execute at the time of image build by developer ..
+#onbuild instruction will execute at the time of someone used user image
+ONBUILD ADD index.html /usr/share/nginx/html/index.html
+CMD [ "nginx", "-g", "daemon off;" ]
